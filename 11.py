@@ -1,1 +1,1 @@
-# tdjdytmhk[hksr-jkrshopsr[
+# tdjdytmhk
