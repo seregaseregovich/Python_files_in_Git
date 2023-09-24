@@ -23,21 +23,22 @@ def stepen(x):
     return x
 
 
-l = [-3, -2, -1, 0, 1, 2, 3, 4]
-result = map(stepen, l)
+l0 = [-3, -2, -1, 0, 1, 2, 3, 4]
+result = map(stepen, l0)
 print(list(result))
 #  9, 4, 1, 0, 1, 4, 9, 16]
 
 # Пример использования с лямбда-функцией:
-l = [-3, -2, -1, 0, 1, 2, 3, 4]
-result = map(lambda num: num ** 3, l)
+l0 = [-3, -2, -1, 0, 1, 2, 3, 4]
+result = map(lambda num: num ** 3, l0)
 print(list(result))
 #  [-27, -8, -1, 0, 1, 8, 27, 64]
 
 # Пример использования с лямбда-функцией:
-result = map(lambda x, y, z: (x + y) / z, [1, 2, 3, 4], [1, 2, 3, 4, 5], [1, 2, 3, 4])
+l1 = [[1, 2, 3], [1, 2, 3, 4, 5], [10, 2, 3, 4]]
+result = map(lambda x, y, z: (x + y) / z, *l1)
 s = list(result)
-print(s)
+print(s, 'map + *l1')
 #  [2.0, 2.0, 2.0, 2.0] #
 s = list(map(int, s))  #
 print(s)
