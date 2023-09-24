@@ -14,7 +14,7 @@ HW = []
 #    MW.append(mw)
 # for hw in range(47, 79):
 #    HW.append(hw)
-if height <= H[12] and height >= H[11]:
+if H[12] >= height >= H[11]:
     print("У вас нормальное телосложение")
 elif height > H[11]:
     print("Ты слишком высокая! Стань на колени, и измерь свой рост заново!")
