@@ -10,6 +10,7 @@ from collections import OrderedDict
 ddd = {3: '3', '2': '2', 33: '3', '4': '4', 5: '5'}
 first = list(ddd.items())[0]
 dct = OrderedDict(ddd)
-print(first)
+print(ddd)
+print(dict(dct))
 dct.move_to_end('4', last=False)
-print(dct)
+print(dict(dct))
