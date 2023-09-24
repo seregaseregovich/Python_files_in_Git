@@ -1,0 +1,30 @@
+class DataBase:
+    __instance = None
+
+    def __new__(cls, *args, **kwargs):
+        print('MAGIC__NEW__')
+        # return super().__new__(cls)
+        if cls.__instance is None:
+            cls.__instance = super().__new__(cls)
+        return cls.__instance
+
+    def __del__(self):
+        print('MAGIC__DEL__')
+        DataBase.__instance = None
+
+    def __init__(self, name='noname', num='0000', port='00'):
+        print('MAGIC__INIT__')
+        self.name = name
+        self.num = num
+        self.port = port
+        print(self.name, self.num, self.port)
+
+    def connect(self):
+        print(f'Connecnting with: {self.name}, {self.num}, {self.port}')
+
+
+db1 = DataBase('Sergei', 35, 218)
+db2 = DataBase('Mishka', 32, 214)
+db1.connect()
+db2.connect()
+print(id(db1), id(db2))
