@@ -1,5 +1,5 @@
 values = input('Введите числа через запятую: ')
-ints_as_strings = values.split('.') # Преобразование строки в список.
+ints_as_strings = values.split(',')  # Преобразование строки в список.
 # в качестве разделителя между элементами берем присутствующую
 # в ранее набранной строке запятую (или точку)
 print(values)
@@ -11,15 +11,18 @@ ints = map(int, ints_as_strings)
 aaa = list(map(int, ints_as_strings))
 print(ints, aaa)
 print(ints_as_strings)
-lst = list(ints) # Преобразуем полученный результат в список
-tup = tuple(lst) # Преобразуем полученный результат в кортеж
+lst = list(ints)  # Преобразуем полученный результат в список
+tup = tuple(lst)  # Преобразуем полученный результат в кортеж
 print('Список:', lst)
 print('Кортеж:', tup)
+
 
 # Пример использования с пользовательской функцией:
 def stepen(x):
     x = x ** 2
-    return(x)
+    return x
+
+
 l = [-3, -2, -1, 0, 1, 2, 3, 4]
 result = map(stepen, l)
 print(list(result))
@@ -36,6 +39,6 @@ result = map(lambda x, y, z: (x + y) / z, [1, 2, 3, 4], [1, 2, 3, 4, 5], [1, 2, 
 s = list(result)
 print(s)
 #  [2.0, 2.0, 2.0, 2.0] #
-s = list(map(int, s)) # 
+s = list(map(int, s))  #
 print(s)
 #  [2, 2, 2, 2] #
