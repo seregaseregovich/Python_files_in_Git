@@ -28,7 +28,8 @@ while yes in y:
                                  'arrival_time': arrival_time,
                                  'travel_time': travel_time}
 
-    print('train number', train_number, 'with the data:', list(trains_dict[train_number].items()), 'has been in database.')
+    print('train number', train_number, 'with the data:', 
+          list(trains_dict[train_number].items()), 'has been in database.')
     yes = input('Will you continue to update the database? ')
     if yes in y:
         a1 = input('Will you continue to delete some data from the database? ')
