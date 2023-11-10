@@ -28,7 +28,7 @@ while yes1 in y:
             trains_db.writelines(str(trains_list))
             trains_db.write(", ")
             pass
-        print('train number', train_number, 'with tncvhe data:',
+        print('train number', train_number, 'with the data:',
               trains_list[1], 'has been in database.')
         trains_list = list()
         yes2 = input('Will you continue to update the database? ')
