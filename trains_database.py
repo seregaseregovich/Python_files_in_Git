@@ -6,7 +6,7 @@ with open('trains_db.txt', 'a+'):
 trains_dict = dict()
 trains_list = list()
 yes1 = yes2 = 'y'
-y = ['y', 'Y', 'да', 'Да', 'ДА', 'yes', 'Yes', 'YES']
+y = ['y', 'Y', 'да', 'Да', 'ДА', 'yes', 'Yes', 'YES', 'ok', 'Ok', 'OK', 'ок', 'Ок', 'ОК']
 while yes1 in y:
     while yes2 in y:
         train_number = int(input('Input train number: '))
@@ -26,7 +26,7 @@ while yes1 in y:
         with open('trains_db.txt', 'a+') as trains_db:
             print('File created')
             trains_db.writelines(str(trains_list))
-            trains_db.write(", ")
+            trains_db.writelines(", ")
             pass
         print('train number', train_number, 'with theeee data:',
               trains_list[1], 'has been in database.')
