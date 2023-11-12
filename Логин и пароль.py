@@ -2,8 +2,21 @@ i = input("Введите логин: ")
 p = input("Введите пароль: ")
 ii = "1"
 pp = "1"
+print(i, ii)
+print(p, pp)
 count = 2
-while i != ii and p != pp and count > 0:
+while i != ii and count > 0:
+    print("Неправильный логин или пароль!!!\nПовторите ввод данных.")
+    i = input("Введите логин: ")
+    p = input("Введите пароль: ")
+    if count > 0:
+        print("Осталось", count, "попыток для ввода пароля.")
+        count = count - 1
+    if count == 0:
+        print("Вы 3 раза ввели неправильный пароль. Система заблокирована!")
+        print("")
+        exit()
+while p != pp and count > 0:
     print("Неправильный логин или пароль!!!\тПовторите ввод данных.")
     i = input("Введите логин: ")
     p = input("Введите пароль: ")
@@ -14,5 +27,6 @@ while i != ii and p != pp and count > 0:
         print("Вы 3 раза ввели неправильный пароль. Система заблокирована!")
         print("")
         exit()
+
 print("Вы успешно вошли в систему!")
 print("12345")
