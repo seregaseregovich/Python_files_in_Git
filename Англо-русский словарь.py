@@ -18,7 +18,10 @@ while True:
             del words[s]
             continue
         continue
-
+with open('vocabulary_db.txt', 'a+') as vocabulary_db:
+    vocabulary_db.writelines(str(words))
+    vocabulary_db.writelines(", ")
+    pass
 '''Слова для копирования в словарь для проверки работы (чтобы не набирать вручную)'''
 # dog = собака
 # cat = котик
