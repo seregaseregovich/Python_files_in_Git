@@ -3,16 +3,15 @@
 ## по кругу (сдвинутый список)
 
 from timeit import default_timer as timer
+
 start = timer()
 
-import random
-
-l1 = [2,4,'a',9,0,53]
-l2 = [9,0,53,2,4,'a']
+l1 = [2, 4, 'a', 9, 0, 53]
+l2 = [9, 0, 53, 2, 4, 'a']
 print(' '.join(map(str, l1)) in ' '.join(map(str, l2 * 2)))
 
 end = timer()
-print("Time taken:", end-start)
+print("Time taken:", end - start)
 
 # ПОЯСНЕНИЕ:
 
@@ -22,15 +21,3 @@ print("Time taken:", end-start)
 # список 2 = 2,3,4,1
 # Эти списки будут совпадать "по кругу" - при циклическом переборе
 
-# Второй способ - БЫСТРЕЕ - через генератор списка и сравнения
-# ========================================================
-
-start = timer()
-
-la = [3, 4, 5, 6, 7, 8, 9, 0]
-lb = [9, 0, 3, 4, 5]
-lc = [i for i in lb if i in la]
-print(lc, lc == lb, sep='\n')
-
-end = timer()
-print("Time taken:", end-start)
