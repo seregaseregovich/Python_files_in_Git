@@ -29,5 +29,7 @@ print("Max digit is -", maxd)
 print("Min digit is -", mind)
 
 
-
+# Подсчет суммы цифр любого целого числа
+# ==========================================
+print(sum([int(x) for x in input()]))
 
