@@ -1,1 +1,4 @@
-print(sum([int(x) for x in input()]))
+try:
+    print(sum([int(x) for x in input()]))
+except ValueError:
+    print('Failed')
