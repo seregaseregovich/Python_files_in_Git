@@ -11,7 +11,7 @@ def input_data(n):
             return la
             break
         la.append(a)
-        
+
 
 # Программа
 la = []
@@ -22,7 +22,6 @@ for n in range(1, nn + 1):
     d.append(la)
     la = []
 print(d)
-
 
 # Простой способ создания вложенных списков:
 # Вариант 1
