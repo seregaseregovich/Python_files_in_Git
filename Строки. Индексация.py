@@ -39,15 +39,15 @@ print('Привет \nСергей')
 name = "Siarhei"
 # или как ввести имя при запросе
 # (задать переменную при вводе имени)
-name = input("what is your name? ")
+name1 = input("what is your name? ")
 # input - команда для набора имени с клавиатуры
-print("Привет, ", name)
-print("Как дела, ", name, "? ")
+print("Привет, ", name1)
+print("Как дела, ", name1, "? ")
 # Конкатенация не работает с разными типами данных.
 # Как это обойти. Можно поменять тип данных
 # при помощи функции str()
-name = input('What is your name? ')
-print("Hello, ", name)
+name2 = input('What is your name? ')
+print("Hello, ", name2)
 age = input("How old are you? ")
-print('Привет, тебя зовут ', name)
+print('Привет, тебя зовут ', name2)
 print("и тебе " + str(age) + "лет, верно?")
