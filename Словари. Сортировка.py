@@ -14,7 +14,7 @@ print(dict_res)
 # Для сортировки элементов словаря по ключу или значению используем
 # метод sorted(dict.items(), key=operator.itemgetter(0), reverse=False)
 # из коллекции operator, где:
-# - ...itemgetter(0), где 0 - сортировка по ключу, 1 - сортировка по значению;
+# - operator.itemgetter(0), где 0 - сортировка по ключу, 1 - сортировка по значению;
 # - reverse=False - по возрастанию, reverse=True - по убыванию.
 sorted_dict_res = sorted(dict_res.items(), key=operator.itemgetter(0), reverse=False)
 print(dict(sorted_dict_res))
