@@ -9,4 +9,4 @@ for i in dict1:
         print(f'{i}, date of birth {dict1[i]['date']} {dict1[i]['month']} {dict1[i]['year']}')
 
 sorted_dict1 = sorted(dict1.items(), key=operator.itemgetter(0), reverse=False)
-print(sorted_dict1)
+print(dict1, dict(sorted_dict1), sep='\n')
