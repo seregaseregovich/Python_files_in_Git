@@ -2,8 +2,8 @@ import operator
 import Функция_Обратный_отсчет
 
 dict1 = {
-    'Sergei': {'date': 12, 'month': 'may', 'year': 1975},
-    'Helen': {'date': 16, 'month': 'june', 'year': 1976}
+    'Sergei': {'date': 12, 'month': 'may', 'year': 1975, 'sex': 'male'},
+    'Helen': {'date': 16, 'month': 'june', 'year': 1976, 'sex': 'female'}
 }
 for i in dict1:
     if dict1[i]['year'] > 1971:
