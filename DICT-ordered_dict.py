@@ -9,11 +9,13 @@ users = [
     {'name': 'Masha', 'age': 37, 'salary': 300},
     {'name': 'Allah', 'age': 24, 'salary': 200}
 ]
+
 # Для сортировки по одному ключу:
 lst = sorted(users, key=lambda x: x['salary'])
 for i in lst:
     print(i)
 print()
+
 # Для сортировки по двум ключам
 # внутри функции lambda используем скобки для
 # создания кортежа с необходимыми ключами:
