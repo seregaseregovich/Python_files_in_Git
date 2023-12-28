@@ -22,5 +22,5 @@ for i in lst1:
     set1.update(fun1(i, N))
 lst_res1 = [i + 1 for i in set1]
 lst_res2 = [i for i in range(13) if i not in lst_res1]
-print('Columns, including N: ', lst_res1)
+print('Columns, including N: ', sorted(lst_res1))
 print('Other columns: ', lst_res2)
