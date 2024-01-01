@@ -13,11 +13,11 @@ F = {
 
 def get_files(path, depth=0):
     for i in path:
-        print(' ' * depth, i)
+        print('  ' * depth, i)
         if type(path[i]) == dict:
             get_files(path[i], depth + 1)
         else:
-            print(' ' * (depth + 1), ' '.join(path[i]))
+            print('  ' * (depth + 1), ' '.join(path[i]))
 
 
 get_files(F)
