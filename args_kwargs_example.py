@@ -30,6 +30,8 @@ a, b, *_ = lst
 print(a, b)  # res = 1 2
 
 # Example of unpacking data from the list into the tuple:
+# -------------------------------------------------------
+
 a = [1, 2, 3]
 b = (11, 12, 13) + (*a,)
 print(b)  # res = (11, 12, 13, 1, 2, 3)
@@ -52,8 +54,34 @@ c = [1, 4]
 d = [*range(*c), *a, *b, *(True, False)]
 print(d)  # res = [1, 2, 3, 11, 12, 13, 14, 15, 'a', 'b', 'c', True, False]
 
+# Example of dictionary unpacking:
+# ---------------------------------------------
+
+dict1 = {
+    1: 'one',
+    2: 'two',
+    3: 'three'
+}
+dict2 = {
+    4: 'four',
+    5: 'five',
+    6: 'six'
+}
+a = {*dict1}
+print(a)  # res = {1, 2, 3} - keys unpacked
+a = {**dict1}
+print(a)  # res = {1: 'one', 2: 'two', 3: 'three'} - dict. unpacked
+
+# Unpacking and merging of two dictionaries:
+# ---------------------------------------------
+b = {**dict1, **dict2}
+print(b)  # res = {1: 'one', 2: 'two', 3: 'three', 4: 'four', 5: 'five', 6: 'six'}
+
+
 # An example of using args and kwargs in the function:
 # ====================================================
+
+
 def os_path(disc, *args, sep='\\', **kwargs):
     args = (disc,) + args
     if 'trim' in kwargs and kwargs['trim']:
