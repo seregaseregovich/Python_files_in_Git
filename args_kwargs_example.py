@@ -34,6 +34,16 @@ a = [1, 2, 3]
 b = (11, 12, 13) + (*a,)
 print(b)  # res = (11, 12, 13, 1, 2, 3)
 
+# Example of unpacking into the function RANGE:
+# ---------------------------------------------
+a = [1, 6]  # or tuple: a = (1, 6)
+b = list(range(*a))
+print(b)  # res = [1, 2, 3, 4, 5]
+# The same example:
+a = [1, 6]
+b = [*(range(*a))]
+print(b)  # res = [1, 2, 3, 4, 5]
+
 
 # An example of using args and kwargs in the function:
 # ====================================================
