@@ -29,6 +29,11 @@ print(a, c)  # res = 1 5
 a, b, *_ = lst
 print(a, b)  # res = 1 2
 
+# Example of unpacking data from the list into the tuple:
+a = [1, 2, 3]
+b = (11, 12, 13) + (*a,)
+print(b)  # res = (11, 12, 13, 1, 2, 3)
+
 
 # An example of using args and kwargs in the function:
 # ====================================================
