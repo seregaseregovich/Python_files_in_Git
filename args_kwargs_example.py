@@ -44,6 +44,13 @@ a = [1, 6]
 b = [*(range(*a))]
 print(b)  # res = [1, 2, 3, 4, 5]
 
+# Example of data merging:
+# ---------------------------------------------
+a = [11, 12, 13, 14, 15]
+b = 'abc'
+c = [1, 4]
+d = [*range(*c), *a, *b, *(True, False)]
+print(d)  # res = [1, 2, 3, 11, 12, 13, 14, 15, 'a', 'b', 'c', True, False]
 
 # An example of using args and kwargs in the function:
 # ====================================================
