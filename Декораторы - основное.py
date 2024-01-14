@@ -14,34 +14,37 @@ def test_time(func):
 
 
 @test_time
-def get_nod(a, b):
-    while a != b:
-        if a > b:
-            a -= b
-        else:
-            b -= a
-    return a
+def to_binary1(n):
+    for i in range(100000):
+        continue
+    return "{:0b}".format(n & 0xffffffff)
 
 
 @test_time
-def get_nod2(a, b):
-    if a < b:
-        a, b = b, a
-    while b:
-        a, b = b, a % b
-    return a
+def to_binary2(n):
+    for i in range(100000):
+        continue
+    if n > 0:
+        a = bin(int(n))
+        return a[2:]
+    elif n == 0:
+        return '0'
+    else:
+        a = str(int(bin(2**32)[2:]) - int(bin(abs(n))[2:]))
+        b = ''.join('1' if i == '9' else '0' for i in a)
+        return b
 
 
 # get_nod = test_time(get_nod) - вместо этой строки
 # ставим декоратор @test_time перед этой функцией
-res = get_nod(2, 100000)
+res1 = to_binary1(3)
 
 
 # get_nod2 = test_time(get_nod2) - вместо этой строки
 # # ставим декоратор @test_time перед этой функцией
-res2 = get_nod2(2, 100000)
+res2 = to_binary2(3)
 
-print(res, res2, sep='\n')
+print(res1, res2, sep='\n')
 
 
 # https://www.youtube.com/watch?v=v0qZPplzwUQ&list=PLA0M1Bcd0w8yWHh2V70bTtbVxJICrnJHd&index=47
