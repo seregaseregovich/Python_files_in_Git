@@ -47,7 +47,7 @@ def to_binary2(n):
     elif n == 0:
         return '0'
     else:
-        a = str(int(bin(2**32)[2:]) - int(bin(abs(n))[2:]))
+        a = str(int(bin(2 ** 32)[2:]) - int(bin(abs(n))[2:]))
         b = ''.join('1' if i == '9' else '0' for i in a)
         return b
 
@@ -56,7 +56,6 @@ res1 = to_binary1(3)
 res2 = to_binary2(3)
 
 print(res1, res2, sep='\n')
-
 
 # Tests
 
