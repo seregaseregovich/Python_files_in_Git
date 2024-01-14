@@ -46,14 +46,27 @@ def fib(x):
 
 print(fib(6))
 
+
 #  Еще один вариант:
 
 def fib(x):
-    if x == 1:
-        return 0
-    if x == 2:
-        return 1
-    return fib(x - 1) + fib(x - 2)
+    return fib(x - 1) + fib(x - 2) if x > 1 else x
+
+
+# то же самое, но с декоратором ускоряющим работу:
+
+
+from functools import lru_cache
+
+
+@lru_cache
+def fib2(x):
+    return fib2(x - 1) + fib2(x - 2) if x > 1 else x
+
+
+print(fib2(10))
+
+
 
 #   ЧИСЛО ФИБОНАЧИ.   СПОСОБ 2
 #   Пример ниже - для числа 6:
@@ -66,6 +79,7 @@ for i in range(6 + 1):
 print(s)
 end = timer()
 print("Control time taken:", end - start)
+
 
 #  Еще один вариантЖ
 def fibo(x):
@@ -82,6 +96,7 @@ def fibo(x):
         x -= 1
     return cur
 
+
 #  ЧИСЛО ФИБОНАЧИ. СПОСОБ 3
 
 def fib(n):
@@ -90,6 +105,7 @@ def fib(n):
     for i in range(1, n):
         a, b = b, a + b
     return b
+
 
 print(fib(2))
 print(fib(3))
@@ -112,6 +128,7 @@ def pallindrom(s):
 
 
 print(pallindrom('s2dsffsd2s'))
+
 
 # ====================================
 #  Палиндром - с помощью обысной функции:
@@ -139,4 +156,4 @@ def rec(x, n):
     if n == 0:
         return 1
     else:
-        return x * rec(x, n-1)
+        return x * rec(x, n - 1)
