@@ -12,7 +12,16 @@ def test_time(func):
         dt = et - st
         print(f'Time = {dt} sec')
         return res
-
+    # Стандартный подход для сохранения имени и
+    # докумментации функции.
+    # ВАРИАНТ 1:
+    wrapper.__name__ = func.__name__
+    wrapper.__doc__ = func.__doc__
+    # ВАРИАНТ 2:
+    # from functools import wraps
+    # Вместо двух строчек выше (и перед
+    # функцией wrapper) ввести декоратор:
+    # @wraps(func)
     return wrapper
 
 
