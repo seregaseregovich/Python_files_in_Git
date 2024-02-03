@@ -11,9 +11,11 @@ def dx_dec(dx=0.01):
         def wrapper(x, *ag, **kg):
             res = (func(x + dx, *ag, **kg) - func(x, *ag, **kg)) / dx
             return res
+
         wrapper.__name__ = func.__name__
         wrapper.__doc__ = func.__doc__
         return wrapper
+
     return func_dec
 
 
@@ -25,7 +27,6 @@ def sin_df(x):
 
 print(sin_df.__name__, 'Вариант 1.')
 print(sin_df.__doc__)
-
 
 # Вариант 2:
 # Декорирование.
@@ -43,7 +44,9 @@ def dx_dec(dx=0.01):
         def wrapper(x, *ag, **kg):
             res = (func(x + dx, *ag, **kg) - func(x, *ag, **kg)) / dx
             return res
+
         return wrapper
+
     return func_dec
 
 
