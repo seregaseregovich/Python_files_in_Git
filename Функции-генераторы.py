@@ -1,5 +1,6 @@
 ''' Функции-генераторы. '''
 
+
 # ВАРИАНТ 1 (простейший):
 # ========================
 
@@ -40,6 +41,8 @@ def gen():
 
 a = gen()
 print(list(a))
+
+
 # [5.5, 6.0, 6.5, 7.0, 7.5, 8.0, 8.5, 9.0, 9.5]
 
 
@@ -48,16 +51,16 @@ print(list(a))
 # Пример поиска индексов искомого
 # фрагмента "фабий" в тексте файла.txt.
 
-def gen(f, w):
-    g_index = 0
-    for line in f:
-        index = 0
-        while index != -1:
-            index = line.find(w, index)
-            if index > -1:
-                yield g_index + index
-                index += 1
-        g_index += len(line)
+def gen(file, word):
+    file_index = 0
+    for line in file:
+        line_index = 0
+        while line_index != -1:
+            line_index = line.find(word, line_index)
+            if line_index != -1:
+                yield line_index + file_index
+                line_index += 1
+        file_index += len(line)
 
 
 try:
