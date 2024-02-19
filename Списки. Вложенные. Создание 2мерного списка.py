@@ -9,7 +9,6 @@ def input_data(n):
         a = int(input("enter the numbers: "))
         if a == 0:
             return la
-            break
         la.append(a)
 
 
