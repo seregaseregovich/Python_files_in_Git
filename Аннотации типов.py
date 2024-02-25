@@ -87,4 +87,4 @@ def get_pos(digits: list[int]) -> list[int]:
     return list(filter(lambda x: x > 0, digits))
 
 
-print(get_pos([1, 44, -4, 'ghjj']))
+print(get_pos([1, 44, -4, -9]))
