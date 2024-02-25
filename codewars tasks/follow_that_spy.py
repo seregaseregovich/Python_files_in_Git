@@ -15,13 +15,11 @@ itineraries. There will always be at least one (1) route connecting
 one waypoint to another.'''
 
 
-a = [['s', 'd'], ['a', 'g'], ['g', 'e'], ['e', 's']]
-
 # VARIANT 1:
 # =================
 
 
-def find_routes(a):
+def find_routes1(a):
     b = [x for row in a for x in row]
     n = 0
     string = ''
@@ -41,11 +39,11 @@ def find_routes(a):
             n += 1
     return string
 
-# VARIANT 2:
-# =================
+# # VARIANT 2:
+# # =================
 
 
-def find_routes(arr):
+def find_routes2(arr):
     if len(arr) == 0:
         return None
     elif len(arr) == 1:
@@ -64,13 +62,18 @@ def find_routes(arr):
                 x = i + 1
     return string
 
+
 # Best solution:
 # =====================
 
 
-def find_routes(routes: list) -> str:
+def find_routes3(routes: list) -> str:
     d = dict(routes)
     res = list(d.keys() - d.values())
     while res[-1] in d:
         res.append(d[res[-1]])
     return ', '.join(res)
+
+
+a = [['s', 'd'], ['a', 'g'], ['g', 'e'], ['e', 's']]
+print(find_routes3(a))
