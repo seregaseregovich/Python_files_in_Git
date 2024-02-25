@@ -66,3 +66,25 @@ def mult3_2(x: type_1, y: type_1 = 44) -> type_2:
 print(mult3_1(2), mult3_1.__annotations__)
 # 888 {'x': typing.Union[int, float], 'y': typing.Union[int, float],
 # 'return': typing.Union[int, float, str]}
+
+
+# Пример аннотаций для разных коллекций:
+# ===================================
+
+# списки:
+lst: list[int] = [1, 2, '3']
+# кортежи:
+addr: tuple[int, str] = (1, 'dgfhgjhj')
+book: tuple[str, str, int] = ('sdfg', 'dfghj', 67)
+elems: tuple[float, ...] = (1.0, 2.0)
+# словари:
+words: dict[str, int] = {'one': 1, 'two': 2}
+# сеты:
+person: set[str] = {'kjh', 'rfv8777', '45678'}
+
+
+def get_pos(digits: list[int]) -> list[int]:
+    return list(filter(lambda x: x > 0, digits))
+
+
+print(get_pos([1, 44, -4, 'ghjj']))
