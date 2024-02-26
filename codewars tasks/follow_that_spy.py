@@ -51,6 +51,7 @@ def find_routes2(arr):
         string = arr[x - 1][0] + ', ' + arr[x - 1][1]
         return string
     else:
+        x = 1
         string = arr[x - 1][0] + ', ' + arr[x - 1][1]
         for i in range(len(arr) - 1):  # len = 0,1,2
             if arr[x - 1][1] == arr[x][0]:
