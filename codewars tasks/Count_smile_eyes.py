@@ -25,5 +25,31 @@ with invalid input (input will always be an array).
 Order of the face (eyes, nose, mouth) elements will always be 
 the same.'''
 
+import re
 
-countSmileys([':)', ';(', ';}', ':-D'])
+
+# ВАРИАНТ 1 (мой):
+# ==============================================.
+
+def count_smileys1(arr):
+    return sum([1 for i in arr if re.match(r'[:;][-~]?[)D]', i)])
+
+
+print('Вариант 1')
+print(count_smileys1([':)', ';(', ';}', ':-D']))
+print(count_smileys1([';D', ':-(', ':-)', ';~)']))
+print(count_smileys1([';]', ':[', ';*', ':$', ';-D']))
+print()
+print('Вариант 2')
+
+
+# ВАРИАНТ 2 (на мой взгляд - интересный):
+# ==============================================.
+
+def count_smileys2(_):
+    return re.subn('[:;][~-]?[D)]', '', ' '.join(_))[1]
+
+
+print(count_smileys2([':)', ';(', ';}', ':-D']))
+print(count_smileys2([';D', ':-(', ':-)', ';~)']))
+print(count_smileys2([';]', ':[', ';*', ':$', ';-D']))
