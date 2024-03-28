@@ -1,6 +1,10 @@
 import re
 
-txt = """<!DOCTYPE html>
+txt0 = "подоходный налог, доход, доходяга tthvjbhknj"
+match0 = re.findall(r".+(?<=яга)", txt0)
+print(match0)
+
+txt1 = """<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
@@ -15,5 +19,5 @@ console.log(obj);
 </body>
 </html>"""
 
-match = re.findall(r"^<script.*?>([\w\W]+)(?=</script>)", txt, re.MULTILINE)
-print(match)
+match1 = re.findall(r"^<script.*?>([\w\W]+)(?=</script>)", txt1, re.MULTILINE)
+print(match1)
