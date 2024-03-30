@@ -19,5 +19,8 @@ console.log(obj);
 </body>
 </html>"""
 
-match1 = re.findall(r"<script.*?>([\w\W]+)(?=</script>)", txt1, re.MULTILINE)
+match1 = re.findall(r"""<script.*?>         # выделяем атрибут 1
+                            ([\w\W]+)               # выделяем атрибут 1
+                            (?=</script>)           # выделяем атрибут 1
+                            """, txt1, re.MULTILINE | re.VERBOSE)
 print(match1)
