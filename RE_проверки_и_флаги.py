@@ -1,7 +1,7 @@
 import re
 
 txt0 = "подоходный налог, доход, доходяга tthvjbhknj"
-match0 = re.findall(r".+(?<=яга)", txt0)
+match0 = re.findall(r".+(?=яга)", txt0)
 print(match0)
 
 txt1 = """<!DOCTYPE html>
@@ -19,5 +19,5 @@ console.log(obj);
 </body>
 </html>"""
 
-match1 = re.findall(r"^<script.*?>([\w\W]+)(?=</script>)", txt1, re.MULTILINE)
+match1 = re.findall(r"<script.*?>([\w\W]+)(?=</script>)", txt1, re.MULTILINE)
 print(match1)
