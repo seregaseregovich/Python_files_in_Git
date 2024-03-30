@@ -24,3 +24,5 @@ match1 = re.findall(r"""<script.*?>         # выделяем атрибут 1
                             (?=</script>)           # выделяем атрибут 1
                             """, txt1, re.MULTILINE | re.VERBOSE)
 print(match1)
+
+# https://www.youtube.com/watch?v=xYm6o-TrFeg&list=PLA0M1Bcd0w8w8gtWzf9YkfAxFCgDb09pA&index=14
