@@ -46,3 +46,25 @@ users = [
 lst = sorted(users, key=lambda x: sortfunc(x))
 for i in lst:
     print(i)
+
+
+# ВАРИАНТ 3:
+# ================================================
+# Сортировка обычного словаря:
+
+d1 = {
+    'river': "река",
+    'house': "дом",
+    'tree': "дерево",
+    'road': "дорога"
+}
+
+d1 = dict(sorted(d1.items()))
+print(d1)
+# результат:
+d1 = {
+    'house': 'дом',
+    'river': 'река',
+    'road': 'дорога',
+    'tree': 'дерево'
+}
