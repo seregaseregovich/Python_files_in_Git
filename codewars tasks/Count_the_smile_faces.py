@@ -46,8 +46,8 @@ print('Вариант 2')
 # ВАРИАНТ 2 (на мой взгляд - интересный):
 # ==============================================.
 
-def count_smileys2(_):
-    return re.subn('[:;][~-]?[D)]', '', ' '.join(_))[1]
+def count_smileys2(string):
+    return re.subn('[:;][~-]?[D)]', '', ' '.join(string))[1]
 
 
 print(count_smileys2([':)', ';(', ';}', ':-D']))
