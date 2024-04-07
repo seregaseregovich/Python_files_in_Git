@@ -32,15 +32,11 @@ def test_time(func):
 
 @test_time
 def to_binary1(n):
-    for i in range(100000):
-        continue
     return "{:0b}".format(n & 0xffffffff)
 
 
 @test_time
 def to_binary2(n):
-    for i in range(100000):
-        continue
     if n > 0:
         a = bin(int(n))
         return a[2:]
