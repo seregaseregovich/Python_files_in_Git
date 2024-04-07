@@ -32,7 +32,6 @@ def persistence1(n):
 
 print(persistence1(999))
 
-
 # ВАРИАНТ 2.1:
 # =================================================.
 
@@ -43,10 +42,12 @@ def persistence2(n, c=0):
     return persistence2(reduce(lambda x, y: int(x) * int(y), str(n)), c + 1) if n > 9 else c
 
 
+print(persistence2(45))
+
 # ВАРИАНТ 2.2:
 # ==================================================.
 
-persistence3 = lambda n, c=0: persistence3(reduce(lambda x, y: int(x)*int(y), str(n)), c+1) if n >= 10 else c
 
+persistence3 = lambda n, c=0: persistence3(reduce(lambda x, y: int(x) * int(y), str(n)), c + 1) if n >= 10 else c
 
-print(persistence2(45))
+print(persistence3(44))
