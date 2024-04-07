@@ -19,7 +19,7 @@ Examples (input --> output):
 # =====================================================
 
 
-def rgb(r, g, b):
+def rgb1(r, g, b):
     if r < 0:
         r = 0
     if r > 255:
@@ -35,13 +35,17 @@ def rgb(r, g, b):
     return (hex(r)[2:].zfill(2) + hex(g)[2:].zfill(2) + hex(b)[2:].zfill(2)).upper()
 
 
-print(rgb(-20, 275, 125))
+print(rgb1(-20, 275, 125))
 
 
 # THE BEST SOLUTION:
 # =====================================================
 
 
-def rgb(r, g, b):
+def rgb2(r, g, b):
     round = lambda x: min(255, max(x, 0))
     return ("{:02X}" * 3).format(round(r), round(g), round(b))
+
+
+print(rgb2(-20, 275, 125))
+
