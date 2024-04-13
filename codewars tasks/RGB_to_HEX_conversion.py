@@ -15,7 +15,7 @@ Examples (input --> output):
 148, 0, 211   --> "9400D3"'''
 
 
-# MY SOLUTION:
+# MY SOLUTION 1:
 # =====================================================
 
 
@@ -37,6 +37,26 @@ def rgb1(r, g, b):
 
 print(rgb1(-20, 275, 125))
 
+# MY SOLUTION 2 (improved):
+# ====================================================
+# if x > 255, it is divided by 255 and then using a remainder of division.
+# Example:
+# 257 is rounded to 2 (257 % 255 = 2)
+# 515 is rounded to 5 (515 % 255 = 5).
+
+
+def rnd(x):
+    if x <= 0:
+        return 0
+    return x % 255 if x > 255 else x
+
+
+def rgb(r, g, b):
+    return ("{:02X}" * 3).format(rnd(r), rnd(g), rnd(b))
+
+
+print(rgb(-20, 275, 125))
+
 
 # THE BEST SOLUTION:
 # =====================================================
@@ -48,4 +68,3 @@ def rgb2(r, g, b):
 
 
 print(rgb2(-20, 275, 125))
-
