@@ -46,5 +46,13 @@ def pig_it3(text):
                     if x.isalnum() else x for x in text.split())
 
 
+import re
+
+
+def pig_it4(text):
+    return re.sub(r'(\w{1})(\w*)', r'\2\1ay', text)
+
+
 print(pig_it2('j Pig latin is cool ?'))
 print(pig_it3('j Pig latin is cool ?'))
+print(pig_it4('j Pig latin is cool ?'))
