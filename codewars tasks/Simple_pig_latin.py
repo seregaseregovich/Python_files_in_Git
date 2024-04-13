@@ -50,7 +50,7 @@ import re
 
 
 def pig_it4(text):
-    return re.sub(r'(\w{1})(\w*)', r'\2\1ay', text)
+    return re.sub(r'(\w)(\w*)', r'\2\1ay', text)
 
 
 print(pig_it2('j Pig latin is cool ?'))
